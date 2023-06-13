@@ -55,6 +55,7 @@ def generate_launch_description():
         _plugin_command('init'),
         _plugin_command('factory'),
         _plugin_command('force_system'),
+        _plugin_command('properties'),
         # Wait for (https://github.com/ros-simulation/gazebo_ros_pkgs/pull/941)
         # _plugin_command('force_system'), ' ',
         _arg_command('profile'),
@@ -194,6 +195,10 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'force_system', default_value='true',
             description='Set "false" not to load "libgazebo_ros_force_system.so"'
+        ),
+        DeclareLaunchArgument(
+            'properties', default_value='true',
+            description='Set "false" to not load "libgazebo_ros_properties.so"'
         ),
         DeclareLaunchArgument(
             'server_required', default_value='false',
