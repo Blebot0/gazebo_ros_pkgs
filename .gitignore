@@ -15,3 +15,5 @@
 .DS_Store
 
 CATKIN_IGNORE
+.vscode/c_cpp_properties.json
+gazebo_ros/src/set_model_configuration.cpp
